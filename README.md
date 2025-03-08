@@ -1,0 +1,1 @@
+# MySauna_adjust
