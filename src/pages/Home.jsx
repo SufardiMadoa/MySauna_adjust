@@ -1,21 +1,22 @@
-import React from 'react';
-import Hero from '../components/home/Hero';
-import About from '../components/home/About';
-import Features from '../components/home/Features';
-import Impact from '../components/home/Impact';
-import Community from '../components/home/Community';
-import Articles from '../components/home/Articles';
+import React, { lazy, Suspense } from 'react';
+
+const Hero = lazy(() => import('../components/home/Hero'));
+const About = lazy(() => import('../components/home/About'));
+const Features = lazy(() => import('../components/home/Features'));
+const Impact = lazy(() => import('../components/home/Impact'));
+const Community = lazy(() => import('../components/home/Community'));
+const Articles = lazy(() => import('../components/home/Articles'));
 
 const Home = () => {
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <Hero />
       <About />
       <Features />
       <Impact />
       <Community />
       <Articles />
-    </>
+    </Suspense>
   );
 };
 
