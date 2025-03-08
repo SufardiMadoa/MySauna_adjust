@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../images/logo.svg';
-function Navbar() {
+const Navbar = () =>  {
   return (
     <nav className="navbar navbar-expand-lg sticky-top bg-body-tertiary shadow-sm py-3">
     <div className="container">
